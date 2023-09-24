@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    font-family: 'Playfair Display', sans-serif;
+    color: #fff;
+}
+
+.product-card {   
+    padding: 6px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.star {
+    color: gold;
+}
+.productPrice {
+    text-decoration: line-through;
+    margin-inline: 25px;
+   
+}
+
+.discountPercent {
+    color: rgb(182, 5, 5);
+    font-weight: bold;
+    
+}
+.viewProductBtn {
+    margin-top: auto;
+    width: 60%;
+    margin-bottom: 5px;
+    
+}
+
