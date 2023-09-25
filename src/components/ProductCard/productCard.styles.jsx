@@ -4,7 +4,7 @@ export const ProductsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-inline: 100px;
-  gap: 40px 50px;
+  gap: 50px 90px;
   box-sizing: border-box;
 `
 export const ProductCardStyle = styled.div`
@@ -12,7 +12,6 @@ export const ProductCardStyle = styled.div`
   flex-direction: column;
   padding:10px;
   transition: 0.3s ease-in-out;
-  
   
   &:hover img {
     transform: scale(1.045);

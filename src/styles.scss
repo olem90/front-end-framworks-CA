@@ -8,16 +8,17 @@ html {
 }
 
 .product-card {   
-    padding: 6px;
     transition: box-shadow 0.2s ease-in-out;
 }
+
 .product-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .star {
     color: gold;
 }
+
 .productPrice {
     text-decoration: line-through;
     margin-inline: 25px;
@@ -27,8 +28,10 @@ html {
 .discountPercent {
     color: rgb(182, 5, 5);
     font-weight: bold;
-    
+    font-size: 22px;
+
 }
+
 .viewProductBtn {
     margin-top: auto;
     width: 60%;
@@ -36,3 +39,48 @@ html {
     
 }
 
+.productDetailsDescription {
+    margin-top: 70px;
+    max-width: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.productDetailsPrice {
+    display: flex;
+    gap: 25px;
+}
+
+.productDetails-original-price {
+    text-decoration: line-through;
+}
+
+.product-details-review {
+    max-width:  700px;
+    padding: 10px;
+    margin-block: 40px;
+
+    h2 {
+        width: 100%;
+    }
+}
+.username-reviews {
+    margin-right: 15px;
+}
+.productsDetails-container-wrapper {
+    width: fit-content;
+    margin-inline: auto;
+
+}
+.productDetails-img-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    flex: 1
+}
+.ProductDetails-DiscountPercent {
+    color: rgb(214, 10, 27);
+    font-weight: bold;
+}

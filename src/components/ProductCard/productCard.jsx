@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const url = 'https://api.noroff.dev/api/v1/online-shop';
 
-function calculateDiscount(price, discountedPrice) {
+export function calculateDiscount(price, discountedPrice) {
 
     return ((price - discountedPrice) / price * 100).toFixed(1);
 

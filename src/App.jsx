@@ -13,7 +13,7 @@ function App() {
         <Layout>         
           <Routes>
           
-            <Route path="/" element={<ProductCard />} />
+            <Route path="/home" element={<ProductCard />} />
             <Route path="product/:id" element={<ProductDetails />} />
           
           </Routes>  
