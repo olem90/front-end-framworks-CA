@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { ProductDetailsWrapper } from "./productDetails.style";
-import { ProductsDetailsCard } from "./productDetails.style";
-import { calculateDiscount } from "../ProductCard/productCard";
+import { ProductDetailsWrapper } from "../ProductDetails.style";
+import { ProductsDetailsCard } from "../ProductDetails.style";
+import { calculateDiscount } from "../../ProductCard/productCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { ReviewsColumnsStyles } from "./productDetails.style";
-import { AddToCartButton } from "../Button/Button.styles";
-
+import { ReviewsColumnsStyles } from ".";
+import { AddToCartButton } from "../../Button/Button.styles";
 
 
 function ProductDetails() {
@@ -35,33 +34,6 @@ function ProductDetails() {
         getProductDetails();
     }, [id]);
 
-    /*function RenderReviews() {
-       return (
-        <div className="product-details-review">
-           {product && product.reviews && product.reviews.length > 0 ? <h2>Reviews</h2> : null}
-            {product && product.reviews ? (
-                product.reviews.map((review) => {
-                    let stars = [];
-                    for( let i= 0; i < review.rating; i++) {
-                        stars.push(<FontAwesomeIcon className='star' icon={faStar} key={i} />);
-                    }
-                    return (
-                        <ReviewsColumnsStyles key={review.id}>
-                            <div>
-                                <strong className="username-reviews">{review.username} </strong>
-                                {stars}
-                            </div>
-                            <p>{review.description}</p>
-                        </ReviewsColumnsStyles>
-                    );
-                } )
-            ): null}
-        </div>
-       )
-    }
-   */
-
-
     function RenderReviews() {
         return (
             <div className="product-details-review">
@@ -88,7 +60,6 @@ function ProductDetails() {
             </div>
         )
     }
-
 
 
     if (isLoading) {

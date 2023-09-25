@@ -1,21 +1,19 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout.jsx";
 import ProductCard from "./components/ProductCard/productCard.jsx";
 import styles from './styles.scss';
 //import { ProductCardStyle } from "./components/ProductCard/productCard.styles.jsx";
-import ProductDetails from "./components/productDetailPage/productDetails.jsx";
-
+import ProductDetails from "./components/pages/ProductDetailsPage/productDetails.jsx";
 function App() {
+  const [cart, setCart] = useState([]);
   return (
       <div>
         <Layout>         
           <Routes>
-          
             <Route path="/home" element={<ProductCard />} />
-            <Route path="product/:id" element={<ProductDetails />} />
-          
+            <Route path="product/:id" element={<ProductDetails />} />    
           </Routes>  
         </Layout>   
       </div>    
