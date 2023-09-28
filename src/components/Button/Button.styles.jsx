@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const ViewProductButton = styled.button`
   border: none;
   border-radius: 3px;
   font-size: 16px;
@@ -20,8 +20,8 @@ export const Button = styled.button`
 export const AddToCartButton = styled.button`
   background: rgb(43, 40, 40);
   color: #ff9900;
-  min-width: 100%;
-  max-width: 480px;
+  
+  max-width: 380px;
   margin-top: 20px;
   padding: 12px;
   border: none;
@@ -34,4 +34,45 @@ export const AddToCartButton = styled.button`
   &:hover {
     color: #fff;
   }
+`
+
+export const CheckoutSuccessButton = styled.button`
+  background: #fff;
+  color: #000;
+  border: 1px solid black;
+  margin-top: 45px;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    color: green;
+    border: none;
+  }
+`
+
+export const CheckoutButton = styled.button`
+  width: 50%;
+  margin:30px 0 ;
+  background: black;
+  color: white;
+  padding: 11px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); 
+
+  &:hover {
+    color: #ff9900;
+  }
+`
+export const BackToStoreButton = styled.button`
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
 `

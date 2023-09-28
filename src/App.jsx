@@ -1,65 +1,32 @@
 
-import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import { Route, Routes} from "react-router-dom";
 import { Layout } from "./components/Layout/Layout.jsx";
-import ProductCard from "./components/ProductCard/productCard.jsx";
-import styles from './styles.scss';
-//import { ProductCardStyle } from "./components/ProductCard/productCard.styles.jsx";
-import ProductDetails from "./components/pages/ProductDetailsPage/productDetails.jsx";
+import './styles.scss';
+import ProductDetails from "./components/pages/Product/productDetails.jsx";
+import { CartProvider } from "./contexts/CartContext.jsx";
+import Home from "./components/pages/Home/Home.jsx";
+import Checkout from "./components/pages/Checkout/Checkout.jsx";
+import CheckoutSuccess from "./components/pages/CheckoutSuccess/CheckoutSuccess.jsx";
+import Contact from "./components/pages/Contact/Contact.jsx";
+
 function App() {
-  const [cart, setCart] = useState([]);
+  
   return (
+    <CartProvider>
       <div>
         <Layout>         
           <Routes>
-            <Route path="/home" element={<ProductCard />} />
-            <Route path="product/:id" element={<ProductDetails />} />    
+            <Route path="/"  element={<Home />} />
+            <Route path="/home"  element={<Home />} />
+            <Route path="product/:id" element={<ProductDetails />} /> 
+            <Route path="/checkout" element={<Checkout />} /> 
+            <Route path="/checkout-success" element={<CheckoutSuccess />} />  
+            <Route path="/contact" element={<Contact />} /> 
           </Routes>  
         </Layout>   
-      </div>    
+      </div>  
+    </CartProvider>
   );
 }
 export default App;
-
-/*
-import React from 'react';
-import { Routes, Route, Link, useParams } from 'react-router-dom';
-
-function Home() {
-  return <div>Home</div>;
-}
-
-function Post() {
-  let params = useParams();
-  return <div>Individual Post ID: {params.id}</div>;
-}
-
-function Nav() {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/post/1">Post with ID: 1</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-}
-
-function App() {
-  return (
-    <div>
-      <Nav />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="post/:id" element={<Post />} />
-      </Routes>
-    </div>
-  );
-}
-
-export default App;
-*/

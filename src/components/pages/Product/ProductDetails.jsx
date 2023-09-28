@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { ProductDetailsWrapper } from "../ProductDetails.style";
-import { ProductsDetailsCard } from "../ProductDetails.style";
+import { ProductDetailsWrapper, ProductsDetailsCard, ReviewsColumnsStyles } from "./ProductDetails.styles";
 import { calculateDiscount } from "../../ProductCard/productCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { ReviewsColumnsStyles } from ".";
 import { AddToCartButton } from "../../Button/Button.styles";
-
+import { useCart } from "../../../contexts/CartContext";
 
 function ProductDetails() {
     const [product, setProduct] = useState(null);
+    const [productAdded, setProductAdded] = useState(false);
+    const [state, dispatch] = useCart();
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     const { id } = useParams();
@@ -24,7 +24,6 @@ function ProductDetails() {
                 const response = await fetch(productUrl);
                 const json = await response.json();
                 setProduct(json);
-                console.log(json)
                 setIsLoading(false);
             } catch (error) {
                 setIsLoading(false);
@@ -61,24 +60,33 @@ function ProductDetails() {
         )
     }
 
-
     if (isLoading) {
         return <div>Loading...</div>
     }
     if (isError) {
         return <div>Error loading product</div>
     }
+
+    const addToCart = () => {
+        dispatch({ type: 'addProduct', payload: product })
+        setProductAdded(true);
+
+        setTimeout(() => {
+            setProductAdded(false);
+        }, 3000);
+    };
    
     return (
         <ProductDetailsWrapper>
           <div className="productsDetails-container">
             <div className="productsDetails-container-wrapper">
               {product ? (
-                  <ProductsDetailsCard  key={product.id}>
+                  <ProductsDetailsCard key={product.id}>
                       <div className="productDetails-img-container">
                         <h1>{product.title}</h1>
                         <img src={product.imageUrl}></img>
-                        <AddToCartButton>ADD TO CART</AddToCartButton>
+                        <AddToCartButton onClick={addToCart}>ADD TO CART</AddToCartButton>
+                        {productAdded && <p className="product-added-message">Product has been successfully added to your cart :)</p>}
                       </div>
                       <div className="productDetailsDescription">
                         <p>{product.description}</p>
@@ -86,8 +94,8 @@ function ProductDetails() {
                         <div>{product.price > product.discountedPrice ? (
                           <div className="productDetailsPrice">
                               <p><b>Price: ${product.discountedPrice}</b></p>
-                              <p className="productDetails-original-price">{product.price}</p>
-                              <p className="ProductDetails-DiscountPercent">{calculateDiscount(product.price, product.discountedPrice)}%</p> 
+                              <p className="productDetails-original-price">${product.price}</p>
+                              <p className="ProductDetails-DiscountPercent">{calculateDiscount(product.price, product.discountedPrice)}% OFF</p> 
                           </div>
                         ) : (
                           <p><b>Price: ${product.price}</b></p>
@@ -102,11 +110,8 @@ function ProductDetails() {
               )}
               <RenderReviews />
             </div>  
-          </div>
-
-            
-          
-          </ProductDetailsWrapper>
+          </div>     
+        </ProductDetailsWrapper>
       );
   }
 export default ProductDetails;

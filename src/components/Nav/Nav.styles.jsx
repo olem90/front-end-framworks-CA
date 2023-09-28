@@ -5,27 +5,43 @@ export const NavWrapper = styled.nav`
   color: white;
   display: flex;
   font-size: 20px;
-  justify-content: space-around;
+  gap: 200px;
   align-items: center;
   padding: 1rem;
-  height: 80px;
+  height: 120px;
+  box-sizing: border-box;
 
   a {
     color: white;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      font-weight: bold;
+      color: #ff9900;
+      border-bottom: 2px solid #ff9900;
+    }
 
     &:hover {
       color: #ff9900;
+    }
+
+    &.logo.active {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    &.cart-icon.active {
+      text-decoration: none;
+      font-weight: bold; 
     }
   }
 `;
 
 export const Logo = styled.h1`
   font-family: 'Playfair Display', sans-serif;
-  font-size: 2rem;
   color: #fff;
   margin: 0;
   color: #ff9900;
   font-size: 36px;
+  text-decoration: none;
 `;

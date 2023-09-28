@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ProductsWrapper } from './productCard.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../Button/Button.styles';
+import { ViewProductButton } from '../Button/Button.styles';
 import { ProductCardStyle } from './productCard.styles';
 import SearchBar from '../SearchBar/SearchBar';
 import { useNavigate } from 'react-router-dom';
@@ -76,7 +76,7 @@ function ProductCard () {
                         <b>Price: ${product.price}</b>
                     )}
                     <p>{product.rating} <FontAwesomeIcon className='star' icon={faStar}/></p>
-                    <Button onClick={() => goToProductPage(product.id)} className='viewProductBtn'>View product</Button>
+                    <ViewProductButton onClick={() => goToProductPage(product.id)} className='viewProductBtn'>View product</ViewProductButton>
                 </ProductCardStyle>
             ))}           
           </ProductsWrapper>

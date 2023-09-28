@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const ProductDetailsWrapper = styled.div`
-width: 100vw;
+  width: calc(100vw - 16px);
   box-sizing: border-box;
 `
 
 export const ProductsDetailsCard = styled.div`
-  max-width: 100%;
+  width: 100%;
   display: flex;
   margin-top: 40px;
-
+  
     img {
         width:100%;
-        max-height: 440px;
+        max-height: 340px;
         object-fit: cover;
-        max-width: 480px;
+        max-width: 380px;
         transition: transform 0.4s ease-in-out;
         border-radius: 3px;
     }
@@ -27,7 +27,8 @@ export const ProductsDetailsCard = styled.div`
 
     p {
         font-family: 'Roboto', 'Sans-serif';
-        font-size: 18px;
+        font-size: 19px;
+        max-width: 80%;
     }
 `
 
