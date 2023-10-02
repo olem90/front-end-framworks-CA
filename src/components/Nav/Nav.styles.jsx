@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const NavWrapper = styled.nav`
+  font-family: 'Playfair Display', sans-serif;
   background-color: #333;
   color: white;
   display: flex;
-  font-size: 20px;
+  font-size: 26px;
   gap: 200px;
   align-items: center;
   padding: 1rem;
@@ -42,6 +43,6 @@ export const Logo = styled.h1`
   color: #fff;
   margin: 0;
   color: #ff9900;
-  font-size: 36px;
+  font-size: 42px;
   text-decoration: none;
 `;

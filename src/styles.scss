@@ -140,3 +140,23 @@ html {
     padding: 15px;
     border-radius: 10px;
 }
+
+.searchBarLink {
+    padding: 2px;
+    z-index: 99;
+    color: #000;
+}
+
+.searchBarLink:hover {
+    color: #e48a04;
+}
+.searchResults {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 99;
+    background: #ffffff;
+    padding: 9px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 216, 216);
+}

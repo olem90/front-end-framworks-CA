@@ -1,4 +1,4 @@
-import React, { useReducer, createContext, useContext} from "react";
+import React, { useReducer, useEffect, createContext, useContext} from "react";
 
 export const CartContext = createContext();
 
@@ -49,11 +49,14 @@ export function reducer(state, action) {
                 }, 0);
                 return {...state, cart: cart, total: newTotal};
 
+            case 'loadSavedCart':
+                return { ...state, cart: action.payload };
+
             case 'clearCart':
-                return {cart: [], total: 0};
+                return { cart: [], total: 0 };
 
             case'increaseQuantityBy1':
-                cart = [...state.cart];
+                cart = [ ...state.cart ];
                 productIndex = cart.findIndex(
                     (product) => product.id === action.payload.id,
                 );
@@ -61,7 +64,7 @@ export function reducer(state, action) {
                 if ( productIndex !== -1) {
                     cart = [
                         ...cart.slice(0, productIndex),
-                        {...cart[productIndex], quantity: cart[productIndex].quantity + 1},
+                        { ...cart[productIndex], quantity: cart[productIndex].quantity + 1 },
                         ...cart.slice(productIndex + 1)
                     ];
                 }
@@ -73,7 +76,7 @@ export function reducer(state, action) {
                 return {...state, cart: cart, total: newTotal};
 
                 case'decreaseQuantityBy1':
-                cart = [...state.cart];
+                cart = [ ...state.cart ];
                 productIndex = cart.findIndex(
                     (product) => product.id === action.payload.id,
                 );
@@ -102,6 +105,27 @@ export function reducer(state, action) {
 export function CartProvider( {children} ) {
     const [state, dispatch] = useReducer( reducer, initialState );
     console.log("Current cart state: ", state);
+
+    useEffect(() => {
+        const savedCart = localStorage.getItem("cart");
+        console.log("Saved Cart from localStorage:", localStorage.getItem("cart"));
+        if (savedCart) {
+            try {
+                const parsedCart = JSON.parse(savedCart);
+                dispatch({ type: "loadSavedCart", payload: parsedCart});
+            } catch (error) {
+                console.error("Failed to parse cart from localStorage", error);
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(state.cart));
+    }, [state.cart])
+
+    const totalProductsInCart = state.cart.reduce((totalProducts, product) => {
+        return totalProducts + product.quantity;
+    }, 0);
 
     return (
         <CartContext.Provider value={[state, dispatch]}>

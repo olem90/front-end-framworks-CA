@@ -8,7 +8,6 @@ import { BackToStoreButton } from "../Button/Button.styles.jsx";
 
 function Cart() { 
     const [state, dispatch] = useCart();
-    
 
     const removeProduct = (product) => {
         const userConfirmation = window.confirm("Are you sure you wanna delete this product?");

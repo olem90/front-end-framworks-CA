@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 import { useCart } from "../../../contexts/CartContext";
 import { SuccessMessage } from './CheckoutSuccess.styles';
 import { SuccessMessageWrapper } from './CheckoutSuccess.styles';
+
 //import { CheckoutSuccessButton } from '../../Button/Button.styles';
 
 const CheckoutSuccess = () => {
     const [,dispatch] = useCart();
 
     useEffect(() => {
-        dispatch({type: 'clearCart'})
+        dispatch({ type: 'clearCart'})
+        localStorage.removeItem('cart');
     }, [dispatch]);
+
+   
 
     return (
         <SuccessMessageWrapper>
