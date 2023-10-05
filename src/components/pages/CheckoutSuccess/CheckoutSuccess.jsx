@@ -14,8 +14,6 @@ const CheckoutSuccess = () => {
         localStorage.removeItem('cart');
     }, [dispatch]);
 
-   
-
     return (
         <SuccessMessageWrapper>
           <SuccessMessage>

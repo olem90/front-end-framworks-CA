@@ -52,7 +52,7 @@ function Cart() {
                                     <div>
                                         <h3 className="cartProductTitle">{product.title}</h3>
                                         <p>Quantity: {product.quantity}</p>
-                                        <p>Price: ${product.price}</p>
+                                        <p>Price: ${product.discountedPrice}</p>
                                     </div>
     
                                     <ProductQuantityButtons>

@@ -50,7 +50,10 @@ export function reducer(state, action) {
                 return {...state, cart: cart, total: newTotal};
 
             case 'loadSavedCart':
-                return { ...state, cart: action.payload };
+                newTotal = action.payload.reduce((currentTotal, product) => {
+                    return currentTotal + product.discountedPrice * product.quantity;
+                }, 0);
+                return { ...state, cart: action.payload, total: newTotal };
 
             case 'clearCart':
                 return { cart: [], total: 0 };
@@ -108,11 +111,17 @@ export function CartProvider( {children} ) {
 
     useEffect(() => {
         const savedCart = localStorage.getItem("cart");
-        console.log("Saved Cart from localStorage:", localStorage.getItem("cart"));
+
         if (savedCart) {
             try {
                 const parsedCart = JSON.parse(savedCart);
-                dispatch({ type: "loadSavedCart", payload: parsedCart});
+          
+                if (parsedCart) {              
+                    dispatch({ type: "loadSavedCart", payload: parsedCart })
+                } else {
+                    console.error("Data from localStorage is not valid");
+                }
+
             } catch (error) {
                 console.error("Failed to parse cart from localStorage", error);
             }
@@ -121,12 +130,10 @@ export function CartProvider( {children} ) {
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(state.cart));
+        localStorage.setItem("total", state.total.toString());
     }, [state.cart])
 
-    const totalProductsInCart = state.cart.reduce((totalProducts, product) => {
-        return totalProducts + product.quantity;
-    }, 0);
-
+    
     return (
         <CartContext.Provider value={[state, dispatch]}>
             { children }

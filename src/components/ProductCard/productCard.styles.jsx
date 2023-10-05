@@ -6,7 +6,7 @@ export const ProductsWrapper = styled.div`
   margin-inline: 100px;
   gap:30px 0px;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 60px;
 `
 export const ProductCardStyle = styled.div`
   box-sizing: border-box;  
@@ -14,7 +14,7 @@ export const ProductCardStyle = styled.div`
   flex-direction: column;
   padding:10px;
   transition: 0.3s ease-in-out;
-  width: 80%;
+  width: 76%;
   margin-inline: auto;
   
   &:hover img {
