@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ViewProductButton = styled.button`
-  border: none;
+border: 1px solid gray;
   border-radius: 3px;
   font-size: 16px;
   cursor: pointer;
@@ -75,4 +75,11 @@ export const BackToStoreButton = styled.button`
   border-radius: 5px;
   border: none;
   margin-top: 20px;
+`
+
+export const FormButton = styled.button`
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  
 `

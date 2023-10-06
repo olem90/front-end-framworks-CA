@@ -7,23 +7,30 @@ export const ContactWrapper = styled.div`
   margin-block: 40px;
 `
 export const FormContainer = styled.div`
-  border: 1px solid black;
-  width: 600px;
+  border: 1px solid gray;
+  width: 40%;
   padding: 25px;
-  
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px 1px grey;
 `
 export const FormStyles = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 
   input, textarea {
     padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 14px;
   }
 
   label {
     font-weight: 500;
+    font-size: 16px;
+
   }
+
   span {
     color: red;
     font-size: 14px;
@@ -31,3 +38,4 @@ export const FormStyles = styled.form`
   }
 
 `
+

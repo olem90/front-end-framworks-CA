@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ContactWrapper, FormContainer, FormStyles } from "./Contact.styles";
+import { FormButton } from "../../Button/Button.styles";
 
 const Contact = () => {
     const [fullName, setFullName] = useState('');
@@ -11,6 +12,19 @@ const Contact = () => {
     const [fullNameError, setFullNameError] = useState('');
     const [subjectError, setsubjectError] = useState('');
     const [bodyError, setbodyError] = useState('');
+    const [isValid, setIsValid] = useState(false);
+
+    useEffect(() => {
+      let timer;
+      if(isValid) {
+        timer = setTimeout(() => {
+          setIsValid(false)
+        }, 10000)
+      }
+      return () => {
+        clearTimeout(timer);
+      };
+    }, [isValid]);
   
     function onFullNameChange(event) {
         setFullName(event.target.value)
@@ -30,39 +44,41 @@ const Contact = () => {
 
     function onFormSubmit(event) {
       event.preventDefault();
-      let isValid = true;
-
+      
       const emailPattern = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+      let valid = true;
 
       if (!emailPattern.test(email)) {
         setEmailError("* Invalid email address");
-          isValid = false;
+        valid = false;
       } else {
         setEmailError("");
       }
 
       if (fullName.length < 3) {
         setFullNameError("* Full name must be at least 3 charachters long");
-          isValid = false;
+        valid = false;
       } else {
         setFullNameError("");
       }
 
       if (subject.length < 3) {
         setsubjectError("* Subject must be at least 3 charachters long");
-          isValid = false;
+        valid = false;
       } else {
         setsubjectError("");
       }
 
       if (body.length < 3) {
         setbodyError("* Message must be at least 3 charachters long");
-          isValid = false;
+        valid = false;
       } else {
         setbodyError("");
       }
 
-      if (isValid) {
+      setIsValid(valid);
+
+      if (valid) {
         console.log({ fullName, subject, email, body });
       }
     }
@@ -99,11 +115,20 @@ const Contact = () => {
               rows={8} required/> 
                 <span>{bodyError}</span>  
 
-              <button type="submit">Submit</button>
+              <FormButton type="submit">Submit</FormButton>
+
+              {isValid ? ( 
+                <p className="form-success-message">
+                Thank you for contacting us. Your form has been submitted 
+                and we will reach out to you within 48 hours.
+                </p>    
+
+              ) : ""}
              
             </FormStyles>
+            
           </FormContainer>   
         </ContactWrapper>
     )
 }
-export default Contact;
+export default Contact; 

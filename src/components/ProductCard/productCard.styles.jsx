@@ -7,6 +7,7 @@ export const ProductsWrapper = styled.div`
   gap:30px 0px;
   box-sizing: border-box;
   margin-top: 60px;
+  background: #FAFAFA;
 `
 export const ProductCardStyle = styled.div`
   box-sizing: border-box;  

@@ -4,7 +4,7 @@ export const SearchBarStyle = styled.div`
   height: 30px;
   width: 30%;
   margin-inline: auto;
-  margin-bottom: 35px;
+  padding-top: 40px;
  
     input {
         width:100%;

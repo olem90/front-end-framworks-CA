@@ -25,7 +25,6 @@ function Cart() {
     };
 
     const handleCheckout = () => {
-        
         window.location.href = '/checkout-success';
     };
 

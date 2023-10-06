@@ -12,6 +12,10 @@ html {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
 }
 
+.product-card-page-wrapper {
+    background: #FAFAFA;
+}
+
 .star {
     color: gold;
 }
@@ -24,6 +28,7 @@ html {
 .discountPercent {
     color: rgb(182, 5, 5);
     font-weight: bold;
+    
 }
 
 .viewProductBtn {
@@ -164,4 +169,13 @@ html {
     border-radius: 10px;
     border: 1px solid rgb(218, 216, 216);
     width: 100%;
+}
+
+.form-success-message {
+    color: rgb(9, 124, 9) !important;
+    padding: 6px;
+    border: 1px solid rgb(9, 124, 9);
+    border-radius: 10px;
+    font-weight: 500;
+    color: rgb(245, 209, 142);
 }
