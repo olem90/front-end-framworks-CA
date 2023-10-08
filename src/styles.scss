@@ -1,18 +1,8 @@
-$logo-Color: #ff9900;
-
 html {
     scroll-behavior: smooth;
 }
 
-.product-card {   
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.product-card:hover {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
-}
-
-.product-card-page-wrapper {
+body {
     background: #FAFAFA;
 }
 
@@ -22,19 +12,12 @@ html {
 
 .productPrice {
     text-decoration: line-through;
-    margin-inline: 25px;
+    margin-inline: 9px;
 }
 
 .discountPercent {
     color: rgb(182, 5, 5);
     font-weight: bold;
-    
-}
-
-.viewProductBtn {
-    margin-top: auto;
-    width: 70%;
-    margin-bottom: 5px;
 }
 
 .productDetailsDescription {
@@ -43,6 +26,7 @@ html {
     display: flex;
     flex-direction: column;
     flex: 1;
+    
 }
 
 .productDetailsPrice {

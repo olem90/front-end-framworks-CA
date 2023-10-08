@@ -4,7 +4,8 @@ export const ContactWrapper = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-block: 40px;
+  margin-top: 50px;
+  box-sizing: border-box;
 `
 export const FormContainer = styled.div`
   border: 1px solid gray;
@@ -12,6 +13,7 @@ export const FormContainer = styled.div`
   padding: 25px;
   border-radius: 15px;
   box-shadow: 2px 2px 5px 1px grey;
+  background: #ffff;
 `
 export const FormStyles = styled.form`
   display: flex;

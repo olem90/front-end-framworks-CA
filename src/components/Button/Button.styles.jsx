@@ -1,20 +1,33 @@
 import styled from "styled-components";
 
 export const ViewProductButton = styled.button`
-border: 1px solid gray;
+  border: 1px solid gray;
   border-radius: 3px;
   font-size: 16px;
   cursor: pointer;
   color: #000;
   background: white;
   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4); 
-  transition: 0.6s ease-in-out;
+  transition: 0.5s ease-in-out;
+  white-space: nowrap;
+  margin-top: auto;
+  width: 70%;
+
 
   &:hover {
     color: #ff9900;
-    border: none;
+    border: 1px solid gray;
     background: rgb(75, 74, 72);
     width: 100%;
+  }
+
+  @media(max-width: 669px) {
+    color: #ff9900;
+    border: 1px solid gray;
+    background: rgb(75, 74, 72);
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px;
   }
 `
 export const AddToCartButton = styled.button`

@@ -84,6 +84,7 @@ const Contact = () => {
     }
 
     return (
+      <div className="contact-page-wrapper">
         <ContactWrapper>
           <FormContainer>
             <FormStyles onSubmit={onFormSubmit}>
@@ -129,6 +130,7 @@ const Contact = () => {
             
           </FormContainer>   
         </ContactWrapper>
+      </div>
     )
 }
 export default Contact; 

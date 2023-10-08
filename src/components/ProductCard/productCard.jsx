@@ -55,7 +55,7 @@ function ProductCard () {
     }
 
     return (
-        <div className='product-card-page-wrapper'>
+        <div>
           <SearchBar products={products} />
           <ProductsWrapper> 
             {products.map((product) => (
