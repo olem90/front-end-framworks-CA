@@ -6,7 +6,7 @@ export function Layout({ children }) {
   return (
       <LayoutStyle>
         <Header />
-        {children}
+          {children}
         <Footer />
       </LayoutStyle>
   )

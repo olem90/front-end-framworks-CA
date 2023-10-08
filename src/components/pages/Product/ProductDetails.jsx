@@ -95,7 +95,7 @@ function ProductDetails() {
                           <div className="productDetailsPrice">
                               <p><b>Price: ${product.discountedPrice}</b></p>
                               <p className="productDetails-original-price">${product.price}</p>
-                              <p className="ProductDetails-DiscountPercent">{calculateDiscount(product.price, product.discountedPrice)}% OFF</p> 
+                              <span className="ProductDetails-DiscountPercent">{calculateDiscount(product.price, product.discountedPrice)}% OFF</span> 
                           </div>
                         ) : (
                           <p><b>Price: ${product.price}</b></p>

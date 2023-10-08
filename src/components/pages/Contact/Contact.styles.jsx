@@ -14,6 +14,19 @@ export const FormContainer = styled.div`
   border-radius: 15px;
   box-shadow: 2px 2px 5px 1px grey;
   background: #ffff;
+  
+  @media(max-width: 1000px) {
+    width: 50%;
+  }
+
+  @media(max-width: 600px) {
+    width: 65%;
+  }
+
+  @media(max-width: 450px) {
+    width: 75%;
+  }
+  
 `
 export const FormStyles = styled.form`
   display: flex;
@@ -25,11 +38,14 @@ export const FormStyles = styled.form`
     border: 1px solid gray;
     border-radius: 5px;
     font-size: 14px;
+    background: #fff;
+    color: #000;
   }
 
   label {
     font-weight: 500;
     font-size: 16px;
+    color: #000;
 
   }
 
@@ -38,6 +54,19 @@ export const FormStyles = styled.form`
     font-size: 14px;
     font-weight: 500;
   }
+
+  @media(max-width: 600px) {
+    label {
+      font-weight: 600;
+      font-size: 15px;
+      color: #000;
+
+        
+
+  
+      }
+  }
+
 
 `
 

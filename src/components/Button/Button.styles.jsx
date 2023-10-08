@@ -94,5 +94,12 @@ export const FormButton = styled.button`
   color: #fff;
   background: #000;
   border-radius: 5px;
+  margin: auto;
+  width: 100%; 
   
+  @media(max-width: 400px) {
+    height: 40px;
+    margin: auto;
+    width: 100%;     
+  }
 `

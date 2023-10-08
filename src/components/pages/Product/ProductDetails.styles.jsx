@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProductDetailsWrapper = styled.div`
-  width: calc(100vw - 16px);
+  width: calc(100vw - 18px);
   box-sizing: border-box;
 `
 
@@ -23,12 +23,20 @@ export const ProductsDetailsCard = styled.div`
         font-size:36px;
         width: fit-content;
         padding-block: 5px;
+        color: #000;
     }
 
     p {
         font-family: 'Roboto', 'Sans-serif';
         font-size: 19px;
         max-width: 80%;
+        color: #000;
+    }
+
+    span {
+      font-family: 'Roboto', 'Sans-serif';
+      color: red;
+      margin-top: 22px;
     }
 `
 
