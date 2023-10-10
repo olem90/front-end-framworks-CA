@@ -21,7 +21,7 @@ export const ViewProductButton = styled.button`
     width: 100%;
   }
 
-  @media(max-width: 669px) {
+  @media(max-width: 865px) {
     color: #ff9900;
     border: 1px solid gray;
     background: rgb(75, 74, 72);
@@ -29,6 +29,13 @@ export const ViewProductButton = styled.button`
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
     margin-bottom: 20px;
   }
+
+  @media(max-width: 359px) {
+    width: 98%;
+    margin-inline: auto;
+  }
+
+  
 `
 export const AddToCartButton = styled.button`
   background: rgb(43, 40, 40);

@@ -11,12 +11,11 @@ export const NavWrapper = styled.nav`
   padding: 1rem;
   height: 120px;
   box-sizing: border-box;
-
   
-
   a {
     color: white;
     transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
 
     &.active {
       font-weight: bold;
@@ -82,6 +81,7 @@ export const NavWrapper = styled.nav`
     position: relative;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 
       .logo {
         font-size: 28px;
@@ -106,8 +106,64 @@ export const NavWrapper = styled.nav`
   @media(max-width: 379px) {
     a:nth-child(2), a:nth-child(3), a:nth-child(4) {
       font-size: 16px;
-      margin-right: 20px;
+      justify-content: center;
+      margin-inline: auto;
     }
+
+    a:nth-child(2) {
+      margin-left: -40%;
+    }
+
+    @media(max-width: 339px) {
+      a:nth-child(2), a:nth-child(3), a:nth-child(4) {
+        font-size: 13px;
+        margin-right: 5px;
+      }
+
+      a:nth-child(2) {
+        margin-right: 10%;
+      }
+
+      a:nth-child(3) {
+        margin-right: 10%;
+      }
+
+      a:nth-child(4) {
+        margin-right: 10%;
+      }
+    }
+
+    @media(max-width: 318px) {
+      a:nth-child(2) {
+        margin-left: -45%;
+      }
+
+    }
+
+
+    @media(max-width: 310px) {
+      a:nth-child(2), a:nth-child(3), a:nth-child(4) {
+        margin-right: 17%;
+      }
+
+      a:nth-child(2) {
+        margin-left: -50%; 
+        margin-right: 14%;  
+      }
+
+      a:nth-child(3) {
+        margin-inline: -12px;      
+      }
+
+      
+
+     
+    }
+
+
+    
+
+    
 
   }
 

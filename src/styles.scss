@@ -1,9 +1,19 @@
 html {
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 body {
     background: #FAFAFA;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    @media(max-width: 303px) {
+        overflow-x: hidden;
+      }
 }
 
 .star {
@@ -16,7 +26,7 @@ body {
 }
 
 .discountPercent {
-    color: rgb(182, 5, 5);
+    color: red;
     font-weight: bold;
 }
 
@@ -26,12 +36,11 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    
 }
 
 .productDetailsPrice {
     display: flex;
-    gap: 25px;
+    gap: 45px;
 }
 
 .productDetails-original-price {
@@ -153,6 +162,7 @@ body {
     border-radius: 10px;
     border: 1px solid rgb(218, 216, 216);
     width: 100%;
+    
 }
 
 .form-success-message {

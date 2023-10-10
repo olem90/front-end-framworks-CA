@@ -17,7 +17,6 @@ export const SearchBarStyle = styled.div`
         color: #000;
     }
 
-
   @media(max-width: 700px) {
     width: 60%;
   }

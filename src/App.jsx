@@ -14,7 +14,7 @@ function App() {
   
   return (
     <CartProvider>
-      <div>
+      <div className="app-wrapper">
         <Layout>         
           <Routes>
             <Route path="/"  element={<Home />} />

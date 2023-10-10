@@ -55,7 +55,7 @@ function ProductCard () {
     }
 
     return (
-        <div>
+        <div className='homePageWrapper'>
           <SearchBar products={products} />
           <ProductsWrapper> 
             {products.map((product) => (
@@ -64,7 +64,7 @@ function ProductCard () {
                     <img src={product.imageUrl}></img>
                     <p>{product.description}</p>
                     {product.price > product.discountedPrice ? (                      
-                        <div>                        
+                        <div className='product-card-price-container'>                        
                             <b>Price: ${product.discountedPrice}</b>
                             <span className='productPrice'>${product.price}</span>
                             <span className='discountPercent'>

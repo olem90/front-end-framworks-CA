@@ -44,5 +44,6 @@ export const ReviewsColumnsStyles = styled.div`
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); 
   margin-bottom: 30px;
+  color: #000;
 `
 
