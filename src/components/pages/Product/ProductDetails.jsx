@@ -77,12 +77,14 @@ function ProductDetails() {
     };
    
     return (
+      <div className="product-details-container">
         <ProductDetailsWrapper>
           <div className="productsDetails-container">
             <div className="productsDetails-container-wrapper">
               {product ? (
                   <ProductsDetailsCard key={product.id}>
                       <div className="productDetails-img-container">
+                        
                         <h1>{product.title}</h1>
                         <img src={product.imageUrl}></img>
                         <AddToCartButton onClick={addToCart}>ADD TO CART</AddToCartButton>
@@ -92,10 +94,13 @@ function ProductDetails() {
                         <p>{product.description}</p>
                       
                         <div>{product.price > product.discountedPrice ? (
-                          <div className="productDetailsPrice">
-                              <p><b>Price: ${product.discountedPrice}</b></p>
-                              <p className="productDetails-original-price">${product.price}</p>
-                              <span className="ProductDetails-DiscountPercent">{calculateDiscount(product.price, product.discountedPrice)}% OFF</span> 
+                          <div>
+                              <b>Price: </b>
+                              <div className="productDetailsPrice">
+                                <p>${product.discountedPrice}</p>
+                                <p className="productDetails-original-price">${product.price}</p>
+                                <span className="ProductDetails-DiscountPercent">{calculateDiscount(product.price, product.discountedPrice)}% OFF</span> 
+                              </div>  
                           </div>
                         ) : (
                           <p><b>Price: ${product.price}</b></p>
@@ -112,6 +117,7 @@ function ProductDetails() {
             </div>  
           </div>     
         </ProductDetailsWrapper>
+      </div>
       );
   }
 export default ProductDetails;

@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 export const ProductDetailsWrapper = styled.div`
-  width: calc(100vw - 18px);
   box-sizing: border-box;
 `
 
 export const ProductsDetailsCard = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   margin-top: 40px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin-inline: auto;
   
     img {
-        width:100%;
+        min-width: 100%;
         max-height: 340px;
         object-fit: cover;
-        max-width: 380px;
-        transition: transform 0.4s ease-in-out;
+        max-width: 360px;
         border-radius: 3px;
     }
 
@@ -24,13 +25,15 @@ export const ProductsDetailsCard = styled.div`
         width: fit-content;
         padding-block: 5px;
         color: #000;
+        white-space: nowrap;
     }
 
-    p {
+    p, b {
         font-family: 'Roboto', 'Sans-serif';
         font-size: 19px;
-        max-width: 80%;
+        max-width: 100%;
         color: #000;
+        margin-left: 15px;
     }
 
     span {
@@ -38,12 +41,103 @@ export const ProductsDetailsCard = styled.div`
       color: red;
       margin-top: 22px;
     }
+
+    @media(max-width: 1200px) {
+      img {
+        max-width: 100%;
+      }
+
+      span, p, b {
+        font-size: 17px;
+        
+        margin-top: 20px;
+      }
+
+    @media(max-width: 899px) {
+      width: 60%;
+      flex-direction: column;
+      margin-inline: auto;
+
+      h1 {
+        margin-left: 15px;
+      }
+
+
+      span, p, b {
+        font-size: 20px;
+        margin-left: 7px;
+       
+      }
+
+      img {
+        margin-inline: auto;
+        max-width: 94%;
+        min-width: 94%;
+        max-height: 300px;
+      }
+    }
+
+    @media(max-width: 699px) {
+      min-width: 70%;
+
+      span, p, b {
+        font-size: 18px;
+        margin: 5px 20px 0 6px;
+        padding-block: 10px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+      
+      img {
+        max-height: 280px;
+      }
+    }
+
+    @media(max-width: 599px) {
+      min-width: 70%;
+
+
+    }
+
+    @media(max-width: 499px) {
+      min-width: 90%;
+      
+      h1 {
+        font-size: 28px;
+      }
+
+      span, p, b {
+        font-size: 16px;
+
+      }
+
+    }
+
+    @media(max-width: 449px) {
+      min-width: 98%;
+
+      img {
+        max-height: 240px;
+      }
+
+      span, p, b {
+        font-size: 15px;
+
+      }
+
+    }
+
+    }
 `
 
 export const ReviewsColumnsStyles = styled.div`
+  box-sizing: border-box;
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); 
-  margin-bottom: 30px;
   color: #000;
+  margin-left: 0;
+  width: 100%;
 `
 

@@ -59,7 +59,7 @@ function ProductCard () {
           <SearchBar products={products} />
           <ProductsWrapper> 
             {products.map((product) => (
-                <ProductCardStyle className='product-card' key={product.id}>
+                <ProductCardStyle key={product.id}>
                     <h2>{product.title}</h2>
                     <img src={product.imageUrl}></img>
                     <p>{product.description}</p>

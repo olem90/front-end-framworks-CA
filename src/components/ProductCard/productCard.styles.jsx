@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const ProductsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:30px 0px;
+  gap:50px 0px;
   box-sizing: border-box;
   margin-top: 60px;
-  margin-inline: auto;
+  margin-inline: 100px;
 
   @media(max-width: 1500px) {
     margin-inline: 30px;
@@ -45,19 +45,15 @@ export const ProductCardStyle = styled.div`
   max-width: 80%;
   margin-inline: auto;
   color: #000;
-  
-  &:hover {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05); 
-  }
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.03); 
   
   &:hover img {
     transform: scale(1.035);
   }
 
   img {
-    
     min-width: 98%;
-    max-width: 200px;
+    max-width: 98%;
     height: 200px;
     max-height: 175px;
     object-fit: cover;
@@ -70,7 +66,6 @@ export const ProductCardStyle = styled.div`
 
     @media(max-width: 450px) {
       max-height: 180px;
-
     }
   }
 

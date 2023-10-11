@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContactWrapper = styled.div`
-  width: 100vw;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -14,6 +14,7 @@ export const FormContainer = styled.div`
   border-radius: 15px;
   box-shadow: 2px 2px 5px 1px grey;
   background: #ffff;
+  margin-bottom: 10%;
   
   @media(max-width: 1000px) {
     width: 50%;

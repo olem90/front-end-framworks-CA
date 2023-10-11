@@ -41,7 +41,7 @@ export const AddToCartButton = styled.button`
   background: rgb(43, 40, 40);
   color: #ff9900;
   
-  max-width: 380px;
+  max-width: 100%;
   margin-top: 20px;
   padding: 12px;
   border: none;
@@ -54,6 +54,28 @@ export const AddToCartButton = styled.button`
   &:hover {
     color: #fff;
   }
+
+  @media(max-width: 1200px) {
+      max-width: 100%;
+  }
+
+  @media(max-width: 899px) {
+    min-width: 94%;
+    margin-inline: auto;
+}
+
+  @media(max-width: 699px) {
+    font-size: 15px;
+    padding: 10px;
+
+  }
+
+  @media(max-width: 449px) {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  
 `
 
 export const CheckoutSuccessButton = styled.button`

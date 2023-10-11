@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Route, Routes} from "react-router-dom";
 import { Layout } from "./components/Layout/Layout.jsx";
@@ -17,8 +16,8 @@ function App() {
       <div className="app-wrapper">
         <Layout>         
           <Routes>
-            <Route path="/"  element={<Home />} />
-            <Route path="/home"  element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="product/:id" element={<ProductDetails />} /> 
             <Route path="/checkout" element={<Checkout />} /> 
             <Route path="/checkout-success" element={<CheckoutSuccess />} />  
