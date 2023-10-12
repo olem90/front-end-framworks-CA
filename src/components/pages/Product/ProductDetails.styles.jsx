@@ -43,10 +43,6 @@ export const ProductsDetailsCard = styled.div`
     }
 
     @media(max-width: 1200px) {
-      img {
-        max-width: 100%;
-      }
-
       span, p, b {
         font-size: 17px;
         
@@ -60,6 +56,7 @@ export const ProductsDetailsCard = styled.div`
 
       h1 {
         margin-left: 15px;
+        font-size: 26px;
       }
 
 
@@ -87,7 +84,7 @@ export const ProductsDetailsCard = styled.div`
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 26px;
       }
       
       img {
@@ -97,22 +94,18 @@ export const ProductsDetailsCard = styled.div`
 
     @media(max-width: 599px) {
       min-width: 70%;
-
-
     }
 
     @media(max-width: 499px) {
       min-width: 90%;
       
       h1 {
-        font-size: 28px;
+        font-size: 22px;
       }
 
       span, p, b {
         font-size: 16px;
-
       }
-
     }
 
     @media(max-width: 449px) {
@@ -124,12 +117,17 @@ export const ProductsDetailsCard = styled.div`
 
       span, p, b {
         font-size: 15px;
-
       }
 
+     
     }
 
+    @media(max-width: 449px) {
+      h1 {
+        white-space: wrap;
+      }
     }
+  }
 `
 
 export const ReviewsColumnsStyles = styled.div`

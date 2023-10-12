@@ -147,31 +147,15 @@ export const NavWrapper = styled.nav`
       }
 
       a:nth-child(2) {
-        margin-left: -50%; 
-        margin-right: 14%;  
+        margin-right: 15%;  
       }
 
       a:nth-child(3) {
         margin-inline: -12px;      
       }
-
-      
-
-     
     }
 
-
-    
-
-    
-
   }
-
-
-
-
-
-
 `;
 
 export const Logo = styled.h1`

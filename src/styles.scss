@@ -143,7 +143,6 @@ body {
     max-width: 60%;
     margin-inline: auto;
     box-sizing: border-box;
-    border: 2px solid green;
 
     @media(max-width:1500px) {
         max-width: 60%;
@@ -180,8 +179,9 @@ body {
 }
 
 .cart-wrapper {
-    width: 40%;
+    width: fit-content;
     margin-inline: auto;
+    border: 2px solid red;
 
     .cartTotal {
         border-block: 2px solid black;
@@ -222,6 +222,7 @@ body {
 .empty-cart {
     opacity: 0;
     cursor: default;
+    border: 2px solid red;
 }
 
 .productDetailsDescription {

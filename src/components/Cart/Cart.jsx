@@ -33,7 +33,7 @@ function Cart() {
             <CartStyles>
                 <div className="cart-wrapper">
                     <h1>Your Cart</h1>
-                    {state.cart.length ===0 ? (
+                    {state.cart.length === 0 ? (
                         <>
                           <p className="empty-cart-text">Your cart is empty</p>
                           <BackToStoreButton className="baack" 

@@ -84,7 +84,7 @@ function ProductDetails() {
               {product ? (
                   <ProductsDetailsCard key={product.id}>
                       <div className="productDetails-img-container">
-                        
+
                         <h1>{product.title}</h1>
                         <img src={product.imageUrl}></img>
                         <AddToCartButton onClick={addToCart}>ADD TO CART</AddToCartButton>
@@ -103,7 +103,7 @@ function ProductDetails() {
                               </div>  
                           </div>
                         ) : (
-                          <p><b>Price: ${product.price}</b></p>
+                          <b>Price: ${product.price}</b>
 
                         )}
                         </div>
