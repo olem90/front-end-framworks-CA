@@ -31,7 +31,7 @@ function Cart() {
     return(
         <div>
             <CartStyles>
-                <div className="cart-wrapper">
+                <div className={state.cart.length === 0 ? 'empty-cart-wrapper' : 'cart-wrapper'}>
                     <h1>Your Cart</h1>
                     {state.cart.length === 0 ? (
                         <>
@@ -66,7 +66,6 @@ function Cart() {
                     )} 
 
                     <h2 className={state.cart.length === 0 ? 'empty-cart' : 'cartTotal'}>
-                      
                       Total: ${parseFloat(state.total.toFixed(2))}
                     </h2>
                     <CheckoutButton className={state.cart.length === 0 ? 'empty-cart' : ''} 

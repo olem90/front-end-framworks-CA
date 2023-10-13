@@ -112,11 +112,18 @@ export const CheckoutButton = styled.button`
   &:hover {
     color: #ff9900;
   }
+
+  @media(max-width: 499px) {
+    padding: 7px;
+    width: 70%;
+
+  }
 `
 export const BackToStoreButton = styled.button`
   border-radius: 5px;
   border: none;
   margin-top: 20px;
+  border: 2px solid #000;
 `
 
 export const FormButton = styled.button`

@@ -14,9 +14,7 @@ export const CartProductTemplate = styled.div`
   @media(max-width: 499px) {
     max-height: 120px;
   }
-
 `
-
 
 export const CartStyles = styled.div`
   min-width: 100%;
@@ -93,8 +91,6 @@ export const CartStyles = styled.div`
         }
     }
 
-      
-
       @media(max-width: 549px) {
         margin-left: auto;
         margin-right: 10px;
@@ -107,8 +103,6 @@ export const CartStyles = styled.div`
           font-size: 15px;
         }
       }
-
-      
 
       @media(max-width: 449px) {
         h2 {
@@ -140,7 +134,7 @@ export const CartStyles = styled.div`
         p {
           font-size: 14px;
         }
-    }
+      }
 `
 
 export const ProductQuantityButtons = styled.div`

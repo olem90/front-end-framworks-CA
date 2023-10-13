@@ -206,6 +206,14 @@ body {
     }
 }
 
+.empty-cart-wrapper {
+    width: fit-content;
+    margin-inline: auto;
+    padding-inline: 20px;
+    margin-block: 40px;
+    border: 2px solid red;
+}
+
 .cart-product-text {
     min-width: 200px;
     max-width: 200px;
@@ -239,9 +247,6 @@ body {
         min-width: 100px;
         max-width: 100px;
     }
-
-    
-
 }
 
 #decreaseQuantityBtn {
@@ -299,13 +304,13 @@ body {
 }
 
 .empty-cart-text {
-    font-size: 25px;
+    font-size: 25px;  
+    
 }
 
 .empty-cart {
     opacity: 0;
     cursor: default;
-    border: 2px solid red;
 }
 
 .productDetailsDescription {
