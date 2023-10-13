@@ -9,6 +9,14 @@ import { BackToStoreButton } from "../Button/Button.styles.jsx";
 function Cart() { 
     const [state, dispatch] = useCart();
 
+    function calculateSavings(price, discountedPrice) {
+        return (price - discountedPrice).toFixed(1);
+    }
+
+    const totalSavings = state.cart.reduce((total, product) => {
+        return total + (parseFloat(calculateSavings(product.price, product.discountedPrice)) * product.quantity);
+    }, 0).toFixed(2);
+
     const removeProduct = (product) => {
         const userConfirmation = window.confirm("Are you sure you wanna delete this product?");
         if ( userConfirmation ) {
@@ -64,6 +72,16 @@ function Cart() {
                             </div>      
                         ))
                     )} 
+
+                    <div className="total-savings">
+                        <span>
+                            Total Savings: ${totalSavings}
+                        </span>
+                    </div>
+
+                    <div>
+                         
+                    </div>
 
                     <h2 className={state.cart.length === 0 ? 'empty-cart' : 'cartTotal'}>
                       Total: ${parseFloat(state.total.toFixed(2))}

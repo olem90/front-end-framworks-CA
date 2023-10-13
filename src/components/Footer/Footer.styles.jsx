@@ -15,7 +15,6 @@ export const FooterStyle = styled.div`
         display: flex;
         padding-inline: 10px;
         align-items: center;
-       
     }
 
     i {

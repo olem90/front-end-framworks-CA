@@ -6,14 +6,14 @@ import { ViewProductButton } from '../Button/Button.styles';
 import { ProductCardStyle } from './productCard.styles';
 import SearchBar from '../SearchBar/SearchBar';
 import { useNavigate } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 
 const url = 'https://api.noroff.dev/api/v1/online-shop';
 
 export function calculateDiscount(price, discountedPrice) {
-
     return ((price - discountedPrice) / price * 100).toFixed(1);
-
 }
+
 
 function ProductCard () {
     const [products, setProducts] = useState([]);

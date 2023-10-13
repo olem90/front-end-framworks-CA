@@ -181,7 +181,7 @@ body {
 
     .cartTotal {
         border-block: 2px solid black;
-        margin-top: 50px;
+        margin-top: 10px;
         padding: 7px;
     }
 
@@ -213,6 +213,13 @@ body {
     margin-block: 40px;
     display: flex;
     flex-direction: column;
+}
+
+.total-savings {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: green;
 }
 
 .cart-product-text {
