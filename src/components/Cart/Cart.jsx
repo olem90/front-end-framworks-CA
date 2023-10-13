@@ -73,7 +73,7 @@ function Cart() {
                         ))
                     )} 
 
-                    <div className="total-savings">
+                    <div className={state.cart.length === 0 ? 'empty-cart' : 'total-savings'}>
                         <span>
                             Total Savings: ${totalSavings}
                         </span>
