@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes} from "react-router-dom";
 import { Layout } from "./components/Layout/Layout.jsx";
 import './styles.scss';
-import ProductDetails from "./components/pages/Product/productDetails.jsx";
+import ProductDetails from "./components/pages/Product/ProductDetails.jsx";
 import { CartProvider } from "./contexts/CartContext.jsx";
 import Home from "./components/pages/Home/Home.jsx";
 import Checkout from "./components/pages/Checkout/Checkout.jsx";
