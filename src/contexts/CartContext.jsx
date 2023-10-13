@@ -107,7 +107,6 @@ export function reducer(state, action) {
 
 export function CartProvider( {children} ) {
     const [state, dispatch] = useReducer( reducer, initialState );
-    console.log("Current cart state: ", state);
 
     useEffect(() => {
         const savedCart = localStorage.getItem("cart");

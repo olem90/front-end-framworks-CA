@@ -1,8 +1,8 @@
 import { FooterStyle } from "./Footer.styles.jsx";
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
-    
 
     useEffect(() => {
         const scrollToTopButton = document.querySelector(".scroll-to-top");
@@ -21,14 +21,11 @@ export function Footer() {
                 behavior: "smooth"
             });
         });
-
     })
-
-    
 
     return (
         <FooterStyle>
-            <p>Contact Us</p>
+            <Link to={"/contact"}>Contact Us</Link>
             <div>
                <i className="scroll-to-top fas fa-arrow-up"></i>
             </div>

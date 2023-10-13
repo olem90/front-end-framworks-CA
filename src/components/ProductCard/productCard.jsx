@@ -34,7 +34,6 @@ function ProductCard () {
 
                 const response = await fetch(url);
                 const json = await response.json();
-                console.log(json);
 
                 setProducts(json);
                 setIsLoading(false);

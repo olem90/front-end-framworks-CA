@@ -10,7 +10,7 @@ function Cart() {
     const [state, dispatch] = useCart();
 
     function calculateSavings(price, discountedPrice) {
-        return (price - discountedPrice).toFixed(1);
+        return (price - discountedPrice);
     }
 
     const totalSavings = state.cart.reduce((total, product) => {

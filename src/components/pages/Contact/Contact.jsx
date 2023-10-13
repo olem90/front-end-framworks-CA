@@ -124,10 +124,8 @@ const Contact = () => {
                 and we will reach out to you within 48 hours.
                 </p>    
 
-              ) : ""}
-             
-            </FormStyles>
-            
+              ) : ""}        
+            </FormStyles>   
           </FormContainer>   
         </ContactWrapper>
       </div>

@@ -7,8 +7,14 @@ export const FooterStyle = styled.div`
     color: white;
     width: 100%;
     padding: 5px;
-    height: 170px;
+    height: 120px;
     margin-top: auto;
+
+    a {
+        color: #fff;
+        margin-block: auto;
+        margin-left: 20px;
+    }
 
     div {
         margin-inline-start: auto;
