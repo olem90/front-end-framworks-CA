@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContext.jsx";
-import { CartStyles } from "./cart.styles.jsx";
-import { CartProductTemplate } from "./cart.styles.jsx";
-import { ProductQuantityButtons } from "./cart.styles.jsx";
+import { CartStyles } from "./Cart.styles.jsx";
+import { CartProductTemplate } from "./Cart.styles.jsx";
+import { ProductQuantityButtons } from "./Cart.styles.jsx";
 import { CheckoutButton } from "../Button/Button.styles.jsx";
 import { BackToStoreButton } from "../Button/Button.styles.jsx";
 
