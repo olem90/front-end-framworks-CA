@@ -211,7 +211,8 @@ body {
     margin-inline: auto;
     padding-inline: 20px;
     margin-block: 40px;
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-product-text {
