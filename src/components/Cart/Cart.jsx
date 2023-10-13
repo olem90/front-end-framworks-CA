@@ -42,20 +42,20 @@ function Cart() {
                         </>
                     ) : (
                         state.cart.map((product) => (
-                            <div key={product.id}>
+                            <div className="cartProductTemplateContainer" key={product.id}>
                                 <CartProductTemplate>
                                     <div className="cartProductImage">
                                         <img src={product.imageUrl} alt={product.title} />
                                     </div>
     
-                                    <div>
-                                        <h3 className="cartProductTitle">{product.title}</h3>
+                                    <div className="cart-product-text">
+                                        <h2 className="cartProductTitle">{product.title}</h2>
                                         <p>Quantity: {product.quantity}</p>
                                         <p>Price: ${product.discountedPrice}</p>
                                     </div>
     
                                     <ProductQuantityButtons>
-                                        <button onClick={() => decreaseQuantity(product)} >-</button>
+                                        <button id="decreaseQuantityBtn" onClick={() => decreaseQuantity(product)} >-</button>
                                         <button onClick={() => increaseQuantity(product)}>+</button>
                                     </ProductQuantityButtons>
                                     <button onClick={() => removeProduct(product)} className="removeItem-button">x</button>

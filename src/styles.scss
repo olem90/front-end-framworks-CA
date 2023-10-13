@@ -31,8 +31,6 @@ body {
 .productPrice {
     text-decoration: line-through;
     margin-inline: 9px;
-
-    
 }
 
 .discountPercent {
@@ -60,7 +58,6 @@ body {
 
     :nth-child(1) {
         font-weight: bold;
-        
     }
 
     @media(max-width: 899px) {
@@ -133,8 +130,6 @@ body {
       }
 }
 
-
-
 .username-reviews {
     margin-right: 15px;
 }
@@ -164,6 +159,8 @@ body {
     }
 }
 
+
+
 .productDetails-img-container {
     display: flex;
     flex-direction: column;
@@ -179,20 +176,105 @@ body {
 }
 
 .cart-wrapper {
-    width: fit-content;
+    width: 600px;
     margin-inline: auto;
-    border: 2px solid red;
 
     .cartTotal {
         border-block: 2px solid black;
         margin-top: 50px;
         padding: 7px;
     }
+
+    @media(max-width: 999px) {
+        width: 66%;
+    }
+
+    @media(max-width: 749px) {
+        width: 70%;
+    }
+
+    @media(max-width: 649px) {
+        width: 80%;
+    }
+
+    @media(max-width: 499px) {
+        width: 90%;
+    }
+
+    @media(max-width: 399px) {
+        width: 96%;
+    }
+}
+
+.cart-product-text {
+    min-width: 200px;
+    max-width: 200px;
+
+    @media(max-width: 699px) {
+        min-width: 180px;
+        max-width: 180px;
+    }
+
+    @media(max-width: 649px) {
+        min-width: 180px;
+        max-width: 180px;
+    }
+
+    @media(max-width: 549px) {
+        min-width: 160px;
+        max-width: 160px;
+    }
+
+    @media(max-width: 399px) {
+        min-width: 130px;
+        max-width: 130px;
+    }
+
+    @media(max-width: 339px) {
+        min-width: 110px;
+        max-width: 110px;
+    }
+
+    @media(max-width: 320px) {
+        min-width: 100px;
+        max-width: 100px;
+    }
+
+    
+
+}
+
+#decreaseQuantityBtn {
+    line-height: 0.8; 
+    font-family: sans-serif;
 }
 
 .cartProductImage {
-    width: 140px;
-    margin-right: 10px;
+    min-width: 150px;
+    margin-right: 5px;
+
+    @media(max-width: 725px) {
+        min-width: 120px;
+        max-width: 120px;
+    }
+
+    @media(max-width: 649px) {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 110px;
+        min-height: 110px;
+        margin-right: 0px;
+    }
+
+    @media(max-width: 449px) {
+        min-width: 80px;
+        max-width: 80px;
+    }
+
+    @media(max-width: 399px) {
+        min-width: 70px;
+        max-width: 70px;
+    }
 }
 
 .cartProductTitle {
@@ -207,7 +289,8 @@ body {
     height: fit-content;
     font-size: 22px;
     border: none;
-    
+    color: #000;
+    font-weight: 600;
 }
 
 .removeItem-button:hover {
