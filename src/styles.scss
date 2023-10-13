@@ -216,10 +216,14 @@ body {
 }
 
 .total-savings {
-    padding: 10px;
+    padding: 7px;
     font-weight: 700;
     font-size: 18px;
     color: green;
+
+    @media(max-width: 799px) {
+        font-size: 15px;
+    }
 }
 
 .cart-product-text {
