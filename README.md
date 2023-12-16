@@ -14,3 +14,8 @@ offering an efficient and engaging online shopping experience.
 - [Vite](https://vitejs.dev/) - A frontend build tool that significantly improves the frontend development experience
 - [Styled Components](https://styled-components.com/) - A library for styling React applications using tagged template literals
 - [SCSS](https://sass-lang.com/) - A preprocessor scripting language that is interpreted or compiled into CSS
+
+## Getting Started
+### Installing
+1. Clone the repo:
+
