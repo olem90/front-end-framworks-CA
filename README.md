@@ -1,6 +1,6 @@
 # MegaMerch - Front End Frameworks CA
 
-![project-image](/MegaMerch-FEF-CA)
+![project-image](/src/MegaMerch-FEF-CA.png)
 
 ## Description
 This React-based project entails building an eCom store featuring
