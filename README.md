@@ -31,3 +31,7 @@ npm install
 npm run dev
 ```
 
+### Contact
+- [My LinkedIn Profile](https://www.linkedin.com/in/ole-marius-sand%C3%B8-rognan-923202249/)
+- Add me on discord: ```olerognanjan22ft#9663```
+- Email: olemariusrognan90@gmail.com
