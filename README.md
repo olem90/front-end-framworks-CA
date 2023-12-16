@@ -21,3 +21,13 @@ offering an efficient and engaging online shopping experience.
 ```bash
 gh repo clone olem90/front-end-framworks-CA
 ``` 
+2. Install the dependencies:
+```bash
+npm install
+```
+
+### Running
+```bash
+npm run dev
+```
+
