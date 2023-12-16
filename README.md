@@ -18,4 +18,4 @@ offering an efficient and engaging online shopping experience.
 ## Getting Started
 ### Installing
 1. Clone the repo:
-```bash gh repo clone olem90/front-end-framworks-CA ```
+```bash gh repo clone olem90/front-end-framworks-CA ``` 
