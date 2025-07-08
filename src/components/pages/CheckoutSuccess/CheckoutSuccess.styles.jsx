@@ -4,7 +4,7 @@ export const SuccessMessage = styled.div`
   border: 2px solid green;
   max-width: 500px;
   width: 50%;
-  color: ###;
+  color: red;
   padding: 15px 25px;
   border-radius: 10px;
   margin: 150px auto;
